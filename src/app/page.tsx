@@ -1,5 +1,6 @@
 import { ThemeToggle } from "@/components/theme-toggle";
 import Link from "next/link";
+import { PIXELNODE_WEBSITE_URL, SEALED_MARKET_APP_STORE_URL, SEALED_MARKET_PLAY_STORE_URL } from "./const";
 
 const projects = [
   {
@@ -10,11 +11,11 @@ const projects = [
     links: [
       {
         label: "App Store",
-        href: "https://apps.apple.com/us/app/sealed-market-tcg-portfolio/id6759202721",
+        href: SEALED_MARKET_APP_STORE_URL,
       },
       {
         label: "Play Store",
-        href: "https://play.google.com/store/apps/details?id=com.sealedlabs.sealedmarket",
+        href: SEALED_MARKET_PLAY_STORE_URL,
       },
     ],
   },
@@ -22,7 +23,7 @@ const projects = [
     title: "PixelNode",
     description:
       "AI automation studio. Technical delivery partner for business process automation.",
-    links: [{ label: "Visit", href: "https://pixelnode.digital" }],
+    links: [{ label: "Visit", href: PIXELNODE_WEBSITE_URL }],
   },
   {
     title: "AI Agent Coding Standards",
@@ -55,7 +56,7 @@ function TextLink({
 
 export default function Home() {
   return (
-    <main className="mx-auto flex min-h-screen w-full max-w-[680px] flex-col px-6 sm:px-8">
+    <main className="mx-auto flex min-h-screen w-full max-w-170 flex-col px-6 sm:px-8">
       <header className="fixed right-6 top-6 z-10 sm:right-8">
         <ThemeToggle />
       </header>
