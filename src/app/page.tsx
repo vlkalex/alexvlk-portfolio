@@ -8,11 +8,11 @@ const projects = [
     links: [
       {
         label: "App Store",
-        href: "https://apps.apple.com/app/sealed-market/id6738030879",
+        href: "https://apps.apple.com/us/app/sealed-market-tcg-portfolio/id6759202721",
       },
       {
         label: "Play Store",
-        href: "https://play.google.com/store/apps/details?id=com.sealedmarket.app",
+        href: "https://play.google.com/store/apps/details?id=com.sealedlabs.sealedmarket",
       },
     ],
   },
