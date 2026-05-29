@@ -1,10 +1,12 @@
 import { ThemeToggle } from "@/components/theme-toggle";
+import Link from "next/link";
 
 const projects = [
   {
     title: "Sealed Market",
     description:
       "Portfolio tracker for TCG collectors. 3,500+ users on iOS and Android.",
+    caseStudy: "/sealed-market",
     links: [
       {
         label: "App Store",
@@ -61,11 +63,12 @@ export default function Home() {
       <section className="flex min-h-[82vh] flex-col justify-center py-24">
         <div className="space-y-8">
           <div className="space-y-5">
-            <h1 className="max-w-[650px] text-[2.5rem] font-bold leading-[1.08] text-foreground sm:text-5xl">
-              Developer. </br>
-              80% of my code is AI-generated. 100% is
-              production-ready.
+            <h1 className="max-w-162.5 text-[2rem] font-bold leading-[1.08] text-foreground sm:text-5xl">
+              Hi! I&apos;m Alex
             </h1>
+            <h3 className="max-w-162.5 text-[1rem] font-medium leading-[1.08] text-foreground sm:text-2xl">
+              A software developer who builds production-ready apps with the help of AI agents.
+            </h3>
             <p className="text-lg leading-8 text-muted">
               React · React Native · TypeScript · Prague
             </p>
@@ -86,7 +89,7 @@ export default function Home() {
             Projects
           </h2>
           <div className="grid gap-4">
-            {projects.map((project) => (
+            {projects.map((project: { title: string; description: string; caseStudy?: string; links: { label: string; href: string }[] }) => (
               <article
                 className="rounded-lg border border-border p-6 hover:border-foreground/45"
                 key={project.title}
@@ -100,6 +103,14 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="mt-6 flex flex-wrap gap-4">
+                  {project.caseStudy && (
+                    <Link
+                      className="text-sm font-medium text-foreground underline-offset-4 hover:underline"
+                      href={project.caseStudy}
+                    >
+                      View case study
+                    </Link>
+                  )}
                   {project.links.map((link) => (
                     <TextLink href={link.href} key={link.href}>
                       {link.label}
