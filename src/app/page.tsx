@@ -62,7 +62,8 @@ export default function Home() {
         <div className="space-y-8">
           <div className="space-y-5">
             <h1 className="max-w-[650px] text-[2.5rem] font-bold leading-[1.08] text-foreground sm:text-5xl">
-              Developer. 80% of my code is AI-generated. 100% is
+              Developer. </br>
+              80% of my code is AI-generated. 100% is
               production-ready.
             </h1>
             <p className="text-lg leading-8 text-muted">
